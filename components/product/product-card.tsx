@@ -48,7 +48,7 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
         transition={{ duration: 0.4 }}
         whileHover={{ y: -4 }}
       >
-        <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-border bg-muted shadow-sm transition-shadow duration-300 group-hover:shadow-lg">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-md border border-border bg-muted transition-shadow duration-300 group-hover:shadow-md">
           <Link href={`/product/${product.slug}`} className="block h-full w-full">
             <Image
               src={product.images[0]}

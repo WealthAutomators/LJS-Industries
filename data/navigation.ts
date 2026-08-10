@@ -1,16 +1,28 @@
 import { NavLink } from "@/types";
-import { categories } from "./categories";
+
+export const utilityStripLinks: NavLink[] = [
+  { label: "Shop All", href: "/shop" },
+  { label: "Customer Support", href: "/contact" },
+  { label: "Shipping & Returns", href: "/shipping" },
+];
+
+export const categoryNavLinks: NavLink[] = [
+  { label: "Shop", href: "/shop" },
+  { label: "Home & Living", href: "/categories/home-living" },
+  { label: "Workspace", href: "/categories/workspace" },
+  { label: "Tools & Utility", href: "/categories/tools-utility" },
+  { label: "Electronics", href: "/categories/electronics" },
+  { label: "Outdoor", href: "/categories/outdoor" },
+  { label: "Deals", href: "/shop?sale=true" },
+];
 
 export const navigationLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Shop", href: "/shop" },
   {
-    label: "Categories",
+    label: "Departments",
     href: "/categories",
-    children: categories.map((c) => ({
-      label: c.name,
-      href: `/categories/${c.slug}`,
-    })),
+    children: categoryNavLinks.filter((l) => l.href !== "/shop" && !l.href.includes("sale")),
   },
   { label: "New Arrivals", href: "/new-arrivals" },
   { label: "Best Sellers", href: "/best-sellers" },
@@ -19,10 +31,16 @@ export const navigationLinks: NavLink[] = [
 ];
 
 export const footerLinks = {
+  shop: [
+    { label: "Shop All", href: "/shop" },
+    { label: "New Arrivals", href: "/new-arrivals" },
+    { label: "Best Sellers", href: "/best-sellers" },
+    { label: "Deals", href: "/shop?sale=true" },
+    { label: "Categories", href: "/categories" },
+  ],
   company: [
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
-    { label: "Careers", href: "/contact" },
     { label: "FAQs", href: "/faq" },
   ],
   customerCare: [

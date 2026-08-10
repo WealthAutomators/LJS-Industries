@@ -1,12 +1,10 @@
 import { HeroBanner } from "@/components/homepage/hero-banner";
-import { CategoryCarousel } from "@/components/homepage/category-carousel";
-import { DealsOfTheDay } from "@/components/homepage/deals-of-the-day";
-import { FeaturesRow } from "@/components/homepage/features-row";
-import { FeaturedCollection } from "@/components/homepage/featured-collection";
-import { PromotionalBanner } from "@/components/homepage/promotional-banner";
-import { BestSellers } from "@/components/homepage/best-sellers";
-import { AboutSection } from "@/components/homepage/about-section";
+import { FeaturedDepartments } from "@/components/homepage/featured-departments";
 import { NewArrivals } from "@/components/homepage/new-arrivals";
+import { UtilityCollectionBanner } from "@/components/homepage/utility-collection-banner";
+import { BestSellers } from "@/components/homepage/best-sellers";
+import { ShopByNeed } from "@/components/homepage/shop-by-need";
+import { ProductSpotlight } from "@/components/homepage/product-spotlight";
 import { CustomerReviews } from "@/components/homepage/customer-reviews";
 import { Newsletter } from "@/components/homepage/newsletter";
 
@@ -14,14 +12,12 @@ export default function HomePage() {
   return (
     <>
       <HeroBanner />
-      <CategoryCarousel />
-      <DealsOfTheDay />
-      <FeaturesRow />
-      <FeaturedCollection />
-      <PromotionalBanner />
-      <BestSellers />
-      <AboutSection />
+      <FeaturedDepartments />
       <NewArrivals />
+      <UtilityCollectionBanner />
+      <BestSellers />
+      <ShopByNeed />
+      <ProductSpotlight />
       <CustomerReviews />
       <Newsletter />
     </>
